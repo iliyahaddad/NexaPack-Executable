@@ -1,1 +1,93 @@
 @import "tailwindcss";
+
+@theme {
+  --color-nexa-900: #0a0e17;
+  --color-nexa-800: #111827;
+  --color-nexa-700: #1a2332;
+  --color-nexa-600: #243044;
+  --color-nexa-500: #374151;
+  --color-nexa-400: #6b7280;
+  --color-nexa-300: #9ca3af;
+  --color-nexa-200: #d1d5db;
+  --color-nexa-100: #f3f4f6;
+  --color-accent-cyan: #06b6d4;
+  --color-accent-blue: #3b82f6;
+  --color-accent-purple: #8b5cf6;
+  --color-accent-green: #10b981;
+  --color-accent-amber: #f59e0b;
+  --color-accent-red: #ef4444;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: #0a0e17;
+  color: #d1d5db;
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+}
+
+::-webkit-scrollbar {
+  width: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: #111827;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #374151;
+  border-radius: 3px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #4b5563;
+}
+
+.code-block {
+  font-family: 'JetBrains Mono', 'Fira Code', 'Cascadia Code', monospace;
+  font-size: 0.85rem;
+  line-height: 1.6;
+}
+
+.gradient-text {
+  background: linear-gradient(135deg, #06b6d4, #3b82f6, #8b5cf6);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.glow-border {
+  box-shadow: 0 0 15px rgba(6, 182, 212, 0.1), inset 0 0 15px rgba(6, 182, 212, 0.05);
+}
+
+.section-card {
+  background: linear-gradient(135deg, rgba(17, 24, 39, 0.9), rgba(26, 35, 50, 0.9));
+  border: 1px solid rgba(55, 65, 81, 0.5);
+  backdrop-filter: blur(10px);
+}
+
+.nav-link {
+  transition: all 0.2s ease;
+}
+
+.nav-link:hover {
+  background: rgba(6, 182, 212, 0.1);
+  border-left-color: #06b6d4;
+}
+
+.nav-link.active {
+  background: rgba(6, 182, 212, 0.15);
+  border-left-color: #06b6d4;
+  color: #06b6d4;
+}
+
+@keyframes pulse-glow {
+  0%, 100% { box-shadow: 0 0 5px rgba(6, 182, 212, 0.3); }
+  50% { box-shadow: 0 0 20px rgba(6, 182, 212, 0.6); }
+}
+
+.milestone-active {
+  animation: pulse-glow 2s ease-in-out infinite;
+}
