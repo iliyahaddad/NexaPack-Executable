@@ -1,2 +1,2 @@
 # NexaPack-Executable
-NexaPack Executable Runtime
+NexaPack Executable packer
